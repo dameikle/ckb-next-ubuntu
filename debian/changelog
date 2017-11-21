@@ -1,0 +1,5 @@
+ckb-next (2.8.0-1) UNRELEASED; urgency=medium
+
+  * Initial package for the v.2.8.0 release
+
+ -- David Meikle <david@meikle.io>  Sun, 19 Nov 2017 21:07:05 +0100

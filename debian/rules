@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+DISTRIBUTION = $(shell lsb_release -sr)
+VERSION = 0.2.8
+PACKAGEVERSION = $(VERSION)-0~$(DISTRIBUTION)0
+TARBALL = ckb-next-$(VERSION).tar.gz
+URL = https://github.com/mattanger/ckb-next/archive/v$(VERSION).tar.gz
+PREFIX = debian/ckb-next/usr
+
+%:
+	dh $@ --with systemd
+
+override_dh_auto_clean:
+override_dh_auto_test:
+override_dh_auto_build:
+override_dh_auto_install:
+	wget -N -O ckb-next-$(VERSION).tar.gz --progress=dot:mega $(URL)
+	tar --strip-components=1 -xf $(TARBALL)
+	./qmake-auto
+	make
+	mkdir -p $(PREFIX)/bin
+	mkdir -p $(PREFIX)/lib
+	mkdir -p $(PREFIX)/lib/ckb-animations
+	cp bin/ckb $(PREFIX)/bin/ckb
+	cp bin/ckb-daemon $(PREFIX)/bin/ckb-daemon
+	cp bin/ckb-animations/* $(PREFIX)/lib/ckb-animations
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
+
