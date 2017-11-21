@@ -9,7 +9,7 @@ The packages are all signed with my [public key](https://keyserver.ubuntu.com/pk
     gpg --verify <filename>.dsc
   
 ## Building your own package
-Having clones this repository, you can build your own deb package using the following command:
+Having cloned this repository, you can build your own deb package using the following command:
 
     dpkg-buildpackage -us -uc -b
 
