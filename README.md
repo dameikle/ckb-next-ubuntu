@@ -2,7 +2,9 @@
 Rough and ready debian package scripts for [ckb-next](https://github.com/mattanger/ckb-next) the open source Corsair Keyboard and Mouse RGB Driver for Linux and OS X.
 
 ## Pre-built packages
-You can find pre-built packages in a [release PPA](https://launchpad.net/~davidmeikle/+archive/ubuntu/ckb-next-release) that can be used to easily keep up to date.
+You can find pre-built packages in a [release PPA](https://launchpad.net/~davidmeikle/+archive/ubuntu/ckb-next-release) that can be used to easily keep up to date with released versions.
+
+You can find pre-built packages in a [daily PPA](https://launchpad.net/~davidmeikle/+archive/ubuntu/ckb-next-daily) that can be used to easily keep up to date with the latest build.
 
 You can also find single file pre-built packages on the [releases page](https://github.com/dameikle/ckb-next-ubuntu/releases) that can be downloaded and installed on your system.
 
